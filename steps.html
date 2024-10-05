@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steps to Acquire your Data</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h2 style="margin-left: 20px;">To get your data:</h2>
+    <ol>
+        <li>Open the Tik Tok app</li>
+        <li>Tap the "profile" icon at the bottom.
+            <br>
+            <img src="{{ url_for('static', filename='images/First.PNG') }}" alt="Tap profile" width="400">
+        </li>
+        <li>Press the 3 bars on the upper right corner.
+            <br>
+            <img src ="{{ url_for('static', filename='images/first (step 2).PNG') }}" alt="Click the three bars" width="400">
+        </li>
+        <li>Press Settings and Privacy.
+            <br>
+            <img src ="{{ url_for('static', filename='images/Tap Settings and Privacy.PNG') }}" alt="Settings and Privacy" width="400">
+        </li>
+        <li>Tap Account.
+            <br>
+            <img src ="{{ url_for('static', filename='images/After settings and privacy.PNG') }}" alt="Account" width="400">
+        </li>
+        <li>Go to "Download your data".
+            <br>
+            <img src ="{{ url_for('static', filename='images/Account.PNG') }}" alt="Download your data" width="400">
+        </li>
+        <li>Change the file format by tapping on "Select file format".
+            <br>
+            <img src ="{{ url_for('static', filename='images/Download your data.PNG') }}" alt="Change file format" width="400">
+        </li>
+        <li>Switch to JavaScript Object Notation (JSON).
+            <br>
+            <img src ="{{ url_for('static', filename='images/Tap Settings and Privacy.PNG') }}" alt="Switch to JSON" width="400">
+        </li>
+        <li>After waiting a while, you should receive a system notification that looks like this:
+            <br>
+            <img src ="{{ url_for('static', filename='images/System notifications.PNG') }}" alt="Wait for system update notification" width="400">
+        </li>
+        <li>Tap the update, then view more. That will take you to this page.
+            <br>
+            <img src ="{{ url_for('static', filename='images/Download data after it comes.PNG') }}" alt="Download data after it loads" width="400">
+        </li>
+        <li>You will be redirected to a browser. Continue with the download by tapping "Download".
+            <br>
+            <img src ="{{ url_for('static', filename='images/Follow the download and press download.PNG') }}" alt="Tap download in your browser" width="400">
+        </li>
+        <li>Tap the blue arrow in the bottom left and save to device files.
+            <br>
+            <img src ="{{ url_for('static', filename='images/click the blue arrow and save to files.jpg') }}" alt="Click the blue arrow and save to device files" width="400">
+        </li>
+    </ol>
+
+
+    <h3>
+        Tada! You should be ready to upload your data to the original page.
+    </h3>
+    <a href="{{ url_for('home') }}" class="btn">Return Home</a>
+</body>
+</html>

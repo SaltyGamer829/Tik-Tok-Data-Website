@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tik Tok Wrapped</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+        }
+    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+
+<body>
+    <header class="top-bar">
+        <h1>Welcome to Tik Tok wrapped!</h1>
+    </header>
+
+
+    <h2>Take a look at some interesting statistics you've piled up over time.</h2>
+
+
+    <img src="{{ url_for('static', filename='images/statistics.jpg') }}" alt="statistical image" width="200" class="center-statistical-image">
+    <br><br><br>
+
+
+    <h3>Start by uploading your JSON file from Tik Tok:</h3>
+    <form id="uploadForm" action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".json" required>
+        <button type="submit" class="btn">Upload Your File</button>
+    </form>
+
+
+    {% if show_run_button %}
+    <form id="runForm" action="/analyze" method="POST">
+        <button type="submit" class="btn">Run Analysis</button>
+    </form>
+    {% endif %}
+
+
+    {% if stats %}
+    <h3>Statistics from Your TikTok Data:</h3>
+    <ul>
+        {% for key, value in stats.items() %}
+        <li><strong>{{ key }}:</strong> {{ value }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
+
+
